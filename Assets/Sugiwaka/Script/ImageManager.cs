@@ -41,10 +41,10 @@ namespace NovelGame
             Sprite image = _textToSprite[imageName];
             GameObject parentObject = _textToParentObject[parentObjectName];
 
-            Vector2 position = new Vector2(0, 0);
+            Vector3 position = Vector3.zero;
             Quaternion rotation = Quaternion.identity;
             Transform parent = parentObject.transform;
-            GameObject item = Instantiate(_imagePrefab, position, rotation, parent);
+            GameObject item = Instantiate(_imagePrefab, parent);
             item.GetComponent<Image>().sprite = image;
 
             _textToSpriteObject.Add(imageName, item);
