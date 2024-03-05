@@ -13,6 +13,7 @@ namespace NovelGame
         [SerializeField] GameObject _backgroundObject;
         [SerializeField] GameObject _eventObject;
         [SerializeField] GameObject _imagePrefab;
+        [SerializeField] GameObject _PanelPrefab;
 
         // テキストファイルから、文字列でSpriteやGameObjectを扱えるようにするための辞書
         Dictionary<string, Sprite> _textToSprite;
@@ -48,12 +49,17 @@ namespace NovelGame
             item.GetComponent<Image>().sprite = image;
 
             _textToSpriteObject.Add(imageName, item);
+
+            if (imageName== "background1")
+                Instantiate(_PanelPrefab, parent);
         }
 
         // 画像を削除する
         public void RemoveImage(string imageName)
         {
             Destroy(_textToSpriteObject[imageName]);
+            if (imageName == "background1")
+                Destroy(_PanelPrefab);
         }
     }
 }
