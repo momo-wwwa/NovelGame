@@ -1,13 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;//追加
+using UnityEngine.SceneManagement;//シーン切り替えに必要
 
 public class changeScean : MonoBehaviour
 {
-    public void SwitchScene()
+    public Button ASclub_1;
+    public Button AShome_1;
+    public Button ASlibraly_1;
+
+    public void MoveA()
     {
-        SceneManager.LoadScene("Scene_morimoto2",LoadSceneMode.Single);
-        Debug.Log("押された！");
+        SceneManager.LoadScene("ASclub_1");
+    }
+
+    public void MoveB()
+    {
+        SceneManager.LoadScene("AShome_1");
+    }
+
+    public void MoveC()
+    {
+        SceneManager.LoadScene("ASlibraly_1");
     }
 }
