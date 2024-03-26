@@ -330,6 +330,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c44f715ed787643874ca7e657df036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heart100: {fileID: 5430662502298610892}
+  heart75: {fileID: 8070989946142650486}
+  heart50: {fileID: 7056256036566319911}
+  heart25: {fileID: 727595819838425132}
+  heart0: {fileID: 5107587687461771691}
 --- !u!4 &966743379
 Transform:
   m_ObjectHideFlags: 0

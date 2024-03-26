@@ -13,22 +13,25 @@ public class TeacherHeart : MonoBehaviour
     public GameObject heart0;
 
 
-    private InGameMainController inGameController;
+    //private InGameMainController inGameController;
 
     //
-     private int currentHeartScore;
+     private int currentHeartScore = 80;
 
 
 
     // Start is called before the first frame update
     void Start()
     {   
-        //現在の担任好感度をInGameControllerからもってくる
-        inGameController = FindObjectOfType<InGameMainController>();
+        /*
+            //現在の担任好感度をInGameControllerからもってくる
+            inGameController = FindObjectOfType<InGameMainController>();
 
-        // 現在の担任好感度を取得するためにInGameMainController内のメソッドを呼び出す
-        currentHeartScore = inGameController.GetCurrentTeacherHeartScore();　//ここでInGameControllerの中の現在の担任好感度を返り値としているメソッドを呼び出すため、このプログラム書く人のコードみてGetCurrentTeacherHeartScoreという名前を変える
-        // 現在のスコアに基づいてハートアイコンを更新するメソッドを呼び出す
+            // 現在の担任好感度を取得するためにInGameMainController内のメソッドを呼び出す
+            currentHeartScore = inGameController.GetCurrentTeacherHeartScore();　//ここでInGameControllerの中の現在の担任好感度を返り値としているメソッドを呼び出すため、このプログラム書く人のコードみてGetCurrentTeacherHeartScoreという名前を変える
+            // 現在のスコアに基づいてハートアイコンを更新するメソッドを呼び出す
+            
+        */
         UpdateHeartIcon();
     }
 
