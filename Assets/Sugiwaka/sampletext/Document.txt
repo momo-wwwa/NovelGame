@@ -1,0 +1,11 @@
+&img background1 backgroundObject
+ここで教科選択【どの背景にするかは相談しないと、、】
+選択後、、、、
+各選択肢に沿った背景を表示（EX普通科目
+放課後の選択後、、、
+&img eventCG1 eventObject
+友達の家の場合
+&rmimg eventCG1
+&img eventCG2 eventObject
+自宅の場合
+&rmimg eventCG2
