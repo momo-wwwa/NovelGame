@@ -13,13 +13,13 @@ public class select_subject : MonoBehaviour
     public Button english;
     public Button chemistry;
     string[] plan = new string[4];//配列に今日の授業を入れる
-    int a ;
+    int a = 0;
     void Start()
     {
         // plan = new string[] {"nothing", "nothing", "nothing", "nothing"}; 
         // a = 0;
     }
-    public void chose_math()
+    /*public void chose_math()
     {
         plan[a] = "math";
         Debug.Log("math");
@@ -69,6 +69,51 @@ public class select_subject : MonoBehaviour
         Debug.Log("chemistry");
         a = (a + 1) % 4;
         Debug.Log(string.Join(", ", plan));
+    }
+
+    */
+
+    void AddSubject(string subject)
+    {
+        plan[a] = subject;
+        Debug.Log("Added subject: " + subject);
+        Debug.Log("Current plan: " + string.Join(", ", plan));
+        a = (a + 1) % 4; // インデックスの更新
+    }
+
+    public void OnMathButtonClicked()
+    {
+        AddSubject("Math");
+    }
+
+    public void OnJapaneseButtonClicked()
+    {
+        AddSubject("Japanese");
+    }
+
+    public void OnPhysicsButtonClicked()
+    {
+        AddSubject("Physics");
+    }
+
+    public void OnHistoryButtonClicked()
+    {
+        AddSubject("History");
+    }
+
+    public void OnPEButtonClicked()
+    {
+        AddSubject("PE");
+    }
+
+    public void OnEnglishButtonClicked()
+    {
+        AddSubject("English");
+    }
+
+    public void OnChemistryButtonClicked()
+    {
+        AddSubject("Chemistry");
     }
 
 
