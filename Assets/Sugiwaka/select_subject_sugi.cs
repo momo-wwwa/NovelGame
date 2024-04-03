@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class select_subject : MonoBehaviour
+public class select_subjec_sugi : MonoBehaviour
 {
     public Button math;
     public Button japanese;
@@ -16,7 +16,8 @@ public class select_subject : MonoBehaviour
     int a = 0;
     void Start()
     {
-       
+        // plan = new string[] {"nothing", "nothing", "nothing", "nothing"}; 
+        // a = 0;
     }
     /*public void chose_math()
     {
@@ -70,9 +71,6 @@ public class select_subject : MonoBehaviour
         Debug.Log(string.Join(", ", plan));
     }
 
-<<<<<<< HEAD
-   
-=======
     */
 
     void AddSubject(string subject)
@@ -118,7 +116,6 @@ public class select_subject : MonoBehaviour
         AddSubject("Chemistry");
     }
 
->>>>>>> main
 
 
     // Update is called once per frame
