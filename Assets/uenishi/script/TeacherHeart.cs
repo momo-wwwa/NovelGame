@@ -16,7 +16,7 @@ public class TeacherHeart : MonoBehaviour
     //private InGameMainController inGameController;
 
     //
-     private int currentHeartScore = 80;
+     private int currentHeartScore = 40;
 
 
 
