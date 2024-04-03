@@ -13,6 +13,7 @@ public class select_subject : MonoBehaviour
     public Button english;
     public Button chemistry;
     string[] plan = new string[4];//配列に今日の授業を入れる
+
     int a = 0;
     void Start()
     {
@@ -20,6 +21,7 @@ public class select_subject : MonoBehaviour
         // a = 0;
     }
     /*public void chose_math()
+
     {
         plan[a] = "math";
         Debug.Log("math");
@@ -71,6 +73,7 @@ public class select_subject : MonoBehaviour
         Debug.Log(string.Join(", ", plan));
     }
 
+
     */
 
     void AddSubject(string subject)
@@ -115,7 +118,6 @@ public class select_subject : MonoBehaviour
     {
         AddSubject("Chemistry");
     }
-
 
 
     // Update is called once per frame
