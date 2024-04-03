@@ -5,10 +5,10 @@ using UnityEngine;
 public class SubPoint : MonoBehaviour
 {
     // 別のメソッドでも動くフィールド関数を宣言
-    private double point;
-    private double add;
-    private double crrect;
-    private int counter;
+    protected double point;
+    protected double add;
+    protected double crrect;
+    protected int counter;
 
     public SubPoint() {
         // フィールド関数の初期化
@@ -50,12 +50,12 @@ public class SubPoint : MonoBehaviour
     // 補正値とカウンターの変更
     public void crrectCount () {
         counter += 1;
-        crrect = crrect * 1.2;
+        crrect = crrect * 1.1;
 
         // 初期化
-        if (counter >= 4 || counter <= 0) {
+        if (counter > 4 || counter <= 0) {
             counter = 0;
-            crrect = crrect / 1.2;
+            crrect = crrect / 1.1;
         }
     }
 
