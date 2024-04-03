@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class select_subject : MonoBehaviour
+public class select_subjec_sugi : MonoBehaviour
 {
     public Button math;
     public Button japanese;
