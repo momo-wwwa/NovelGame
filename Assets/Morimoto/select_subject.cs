@@ -16,8 +16,7 @@ public class select_subject : MonoBehaviour
     int a ;
     void Start()
     {
-        // plan = new string[] {"nothing", "nothing", "nothing", "nothing"}; 
-        // a = 0;
+       
     }
     public void chose_math()
     {
@@ -71,6 +70,7 @@ public class select_subject : MonoBehaviour
         Debug.Log(string.Join(", ", plan));
     }
 
+   
 
 
     // Update is called once per frame
