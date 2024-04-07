@@ -1129,6 +1129,7 @@ MonoBehaviour:
   english: {fileID: 415789586}
   chemistry: {fileID: 336711341}
   next: {fileID: 4131549}
+  reset: {fileID: 1625774063}
 --- !u!4 &453070660
 Transform:
   m_ObjectHideFlags: 0

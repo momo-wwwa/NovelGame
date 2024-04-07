@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;//シーン切り替えに必要
 
 public class toNextScenes : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class toNextScenes : MonoBehaviour
         clickCount++; // ボタンが押された回数を増やす
         PlayerPrefs.SetInt("ClickCount", clickCount); // 回数を保存する
         UpdateClickCountText(); // テキストを更新する
+        SceneManager.LoadScene("InGamePlayScene");
     }
 
     void UpdateClickCountText()
