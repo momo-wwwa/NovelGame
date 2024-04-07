@@ -39,9 +39,9 @@ public class select_subject : MonoBehaviour
             AddSubject("Math");
         }
         
-        // if(plan[3] != null){
-        //     next.interactable = true;
-        // }
+        if(plan[3] != null){
+            next.interactable = true;
+        }
     }
 
     public void OnJapaneseButtonClicked()

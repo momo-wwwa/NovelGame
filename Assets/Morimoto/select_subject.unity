@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 4131550}
   - component: {fileID: 4131549}
   - component: {fileID: 4131552}
-  - component: {fileID: 4131553}
   m_Layer: 5
   m_Name: next
   m_TagString: Untagged
@@ -272,26 +271,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickCountText: {fileID: 328140946}
---- !u!114 &4131553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4131547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4929038399d37014f8928d81213f8bbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  math: {fileID: 0}
-  japanese: {fileID: 0}
-  physics: {fileID: 0}
-  history: {fileID: 0}
-  PE: {fileID: 0}
-  english: {fileID: 0}
-  chemistry: {fileID: 0}
-  next: {fileID: 4131549}
 --- !u!1 &106598624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,7 +1128,7 @@ MonoBehaviour:
   PE: {fileID: 1038746538}
   english: {fileID: 415789586}
   chemistry: {fileID: 336711341}
-  next: {fileID: 0}
+  next: {fileID: 4131549}
 --- !u!4 &453070660
 Transform:
   m_ObjectHideFlags: 0
