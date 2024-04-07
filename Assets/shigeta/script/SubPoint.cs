@@ -59,5 +59,13 @@ public class SubPoint : MonoBehaviour
         }
     }
 
+    public void aftSch () {
+        point = point + (2 * crrect);
+
+        if (point > 100) {
+            point = 100;
+        }
+    }
+
 
 }
