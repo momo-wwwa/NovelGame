@@ -12,7 +12,8 @@ public class select_subject : MonoBehaviour
     public Button PE;
     public Button english;
     public Button chemistry;
-     public Button next;
+    public Button next;
+    public Button reset;
     string[] plan = new string[4];//配列に今日の授業を入れる
     int a = 0;
     void Start()
