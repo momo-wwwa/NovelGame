@@ -12,6 +12,7 @@ public class select_subject : MonoBehaviour
     public Button PE;
     public Button english;
     public Button chemistry;
+     public Button next;
     string[] plan = new string[4];//配列に今日の授業を入れる
     int a = 0;
     void Start()
@@ -38,36 +39,69 @@ public class select_subject : MonoBehaviour
             AddSubject("Math");
         }
         
+        // if(plan[3] != null){
+        //     next.interactable = true;
+        // }
     }
 
     public void OnJapaneseButtonClicked()
     {
-        AddSubject("Japanese");
+        if (plan[3] != null){
+            Debug.Log("You can't chouse more subject &" + string.Join(", ", plan));
+        }
+        else {
+            AddSubject("japanese");
+        }
     }
 
     public void OnPhysicsButtonClicked()
     {
-        AddSubject("Physics");
+        if (plan[3] != null){
+            Debug.Log("You can't chouse more subject &" + string.Join(", ", plan));
+        }
+        else {
+            AddSubject("physics");
+        }
     }
 
     public void OnHistoryButtonClicked()
     {
-        AddSubject("History");
+        if (plan[3] != null){
+            Debug.Log("You can't chouse more subject &" + string.Join(", ", plan));
+        }
+        else {
+            AddSubject("History");
+        }
     }
 
     public void OnPEButtonClicked()
     {
-        AddSubject("PE");
+        if (plan[3] != null){
+            Debug.Log("You can't chouse more subject &" + string.Join(", ", plan));
+        }
+        else {
+            AddSubject("PE");
+        }
     }
 
     public void OnEnglishButtonClicked()
     {
-        AddSubject("English");
+        if (plan[3] != null){
+            Debug.Log("You can't chouse more subject &" + string.Join(", ", plan));
+        }
+        else {
+            AddSubject("English");
+        }
     }
 
     public void OnChemistryButtonClicked()
     {
-        AddSubject("Chemistry");
+        if (plan[3] != null){
+            Debug.Log("You can't chouse more subject &" + string.Join(", ", plan));
+        }
+        else {
+            AddSubject("Chemistry");
+        }
     }
 
 
