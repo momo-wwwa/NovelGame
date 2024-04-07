@@ -12,6 +12,7 @@ public class select_subject : MonoBehaviour
     public Button PE;
     public Button english;
     public Button chemistry;
+     public Button next;
     string[] plan = new string[4];//配列に今日の授業を入れる
     int a = 0;
     void Start()
@@ -19,59 +20,7 @@ public class select_subject : MonoBehaviour
         // plan = new string[] {"nothing", "nothing", "nothing", "nothing"}; 
         // a = 0;
     }
-    /*public void chose_math()
-    {
-        plan[a] = "math";
-        Debug.Log("math");
-        a = (a + 1) % 4;
-        Debug.Log(string.Join(", ", plan));
-    }
-
-    public void chose_japanese()
-    {
-        plan[a] = "japanese";
-        Debug.Log("japanese");
-        a = (a + 1) % 4;
-        Debug.Log(string.Join(", ", plan));
-    }
     
-    public void chose_PE()
-    {
-        plan[a] = "PE";
-        Debug.Log("PE");
-        a = (a + 1) % 4;
-        Debug.Log(string.Join(", ", plan));
-    }
-    public void chose_english()
-    {
-        plan[a] = "english";
-        Debug.Log("english");
-        a = (a + 1) % 4;
-        Debug.Log(string.Join(", ", plan));
-    }
-    public void chose_physics()
-    {
-        plan[a] = "physics";
-        Debug.Log("physics");
-        a = (a + 1) % 4;
-        Debug.Log(string.Join(", ", plan));
-    }
-    public void chose_history()
-    {
-        plan[a] = "history";
-        Debug.Log("history");
-        a = (a + 1) % 4;
-        Debug.Log(string.Join(", ", plan));
-    }
-    public void chose_chemistry()
-    {
-        plan[a] = "chemistry";
-        Debug.Log("chemistry");
-        a = (a + 1) % 4;
-        Debug.Log(string.Join(", ", plan));
-    }
-
-    */
 
     void AddSubject(string subject)
     {
@@ -83,37 +32,76 @@ public class select_subject : MonoBehaviour
 
     public void OnMathButtonClicked()
     {
-        AddSubject("Math");
+        if (plan[3] != null){
+            Debug.Log("You can't chouse more subject &" + string.Join(", ", plan));
+        }
+        else {
+            AddSubject("Math");
+        }
+        
+        if(plan[3] != null){
+            next.interactable = true;
+        }
     }
 
     public void OnJapaneseButtonClicked()
     {
-        AddSubject("Japanese");
+        if (plan[3] != null){
+            Debug.Log("You can't chouse more subject &" + string.Join(", ", plan));
+        }
+        else {
+            AddSubject("japanese");
+        }
     }
 
     public void OnPhysicsButtonClicked()
     {
-        AddSubject("Physics");
+        if (plan[3] != null){
+            Debug.Log("You can't chouse more subject &" + string.Join(", ", plan));
+        }
+        else {
+            AddSubject("physics");
+        }
     }
 
     public void OnHistoryButtonClicked()
     {
-        AddSubject("History");
+        if (plan[3] != null){
+            Debug.Log("You can't chouse more subject &" + string.Join(", ", plan));
+        }
+        else {
+            AddSubject("History");
+        }
     }
 
     public void OnPEButtonClicked()
     {
-        AddSubject("PE");
+        if (plan[3] != null){
+            Debug.Log("You can't chouse more subject &" + string.Join(", ", plan));
+        }
+        else {
+            AddSubject("PE");
+        }
     }
 
     public void OnEnglishButtonClicked()
     {
-        AddSubject("English");
+        if (plan[3] != null){
+            Debug.Log("You can't chouse more subject &" + string.Join(", ", plan));
+        }
+        else {
+            AddSubject("English");
+        }
     }
 
     public void OnChemistryButtonClicked()
     {
-        AddSubject("Chemistry");
+        if (plan[3] != null){
+            Debug.Log("You can't chouse more subject &" + string.Join(", ", plan));
+        }
+        else {
+            AddSubject("Chemistry");
+        }
     }
 
 
