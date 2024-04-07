@@ -59,6 +59,7 @@ public class SubPoint : MonoBehaviour
         }
     }
 
+    // 放課後の点数計算
     public void aftSch () {
         point = point + (2 * crrect);
 
