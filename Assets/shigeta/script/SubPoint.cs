@@ -68,5 +68,10 @@ public class SubPoint : MonoBehaviour
         }
     }
 
+    // 点数を取り出し可能にする
+    public double deliver () {
+        return point;
+    }
+
 
 }

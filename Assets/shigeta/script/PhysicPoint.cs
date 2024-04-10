@@ -31,7 +31,7 @@ public class PhysicPoint : MonoBehaviour
     }
 
     // 体育での変化
-    public void powerHealthCalc() {
+    public void powerHealthCalc () {
         power = power + 5;
         limit();
     }
@@ -43,5 +43,9 @@ public class PhysicPoint : MonoBehaviour
         else if (power < 0) {
             power = 0;
         }
+    }
+
+    public int deliverPower () {
+        return power;
     }
 }
