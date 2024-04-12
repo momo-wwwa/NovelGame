@@ -14,7 +14,7 @@ public class CalcTest : MonoBehaviour
     private SubPoint hist;
     private MentalPoint mental;
     private PhysicPoint physic;
-    private LikePoint like;
+    private LikePoint jpLike;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class CalcTest : MonoBehaviour
         // ３パラメータ：インスタンスを生成
         mental = new MentalPoint();
         physic = new PhysicPoint();
-        like = new LikePoint();
+        jpLike = new LikePoint();
 
         // ６教科：インスタンスを生成
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.B) ||
@@ -37,27 +37,78 @@ public class CalcTest : MonoBehaviour
     void Update()
     {
 
-        // ６教科：授業の点数の計算
+        // ６教科の授業の点数の計算・メンタル値の変移・教師好感度の変移
         if (Input.GetKeyDown(KeyCode.G)) {
             jp.classCalc(0);
+            mental.powerClassCalc(0);
+            jpLike.powerClassCalc(0);
         }
         else if (Input.GetKeyDown(KeyCode.H)) {
             jp.classCalc(1);
+            mental.powerClassCalc(1);
+            jpLike.powerClassCalc(1);
         }
         else if (Input.GetKeyDown(KeyCode.I)) {
             jp.classCalc(2);
+            mental.powerClassCalc(2);
+            jpLike.powerClassCalc(2);
         }
 
-        // ６教科：補正値のカウント開始
+        // ６教科の補正値のカウント開始
         if (Input.GetKeyDown(KeyCode.J)) {
             jp.crrectCount();
         }
 
-        // ６教科：放課後の点数の計算
+        // 体育での体力値の変移
+        if (Input.GetKeyDown(KeyCode.O)) {
+            physic.powerHealthCalc();
+        }
+
+        // 保健でのメンタル値の変移
+        if (Input.GetKeyDown(KeyCode.P)) {
+            mental.powerHealthCalc();
+        }
+
+        // 放課後での教師好感度の変移
+        if (Input.GetKeyDown(KeyCode.P)) {
+            jpLike.powerHealthCalc();
+        }
+
+        // ６教科の放課後の点数の計算
         if (Input.GetKeyDown(KeyCode.K)) {
             jp.aftSchCalc();
         }
-        
+
+        // 部活での体力値の変移
+        if (Input.GetKeyDown(KeyCode.L)) {
+            physic.powerClassCalc(0);
+        }
+        else if (Input.GetKeyDown(KeyCode.M)) {
+            physic.powerClassCalc(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.N)) {
+            physic.powerClassCalc(2);
+        }
+
+        // 放課後の行動によるメンタル値の変移
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            mental.mentalAftSch(0);
+        }
+        else if (Input.GetKeyDown(KeyCode.R)) {
+            mental.mentalAftSch(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.S)) {
+            mental.mentalAftSch(2);
+        }
+        else if (Input.GetKeyDown(KeyCode.T)) {
+            mental.mentalAftSch(3);
+        }
+        else if (Input.GetKeyDown(KeyCode.U)) {
+            mental.mentalAftSch(4);
+        }
+        else if (Input.GetKeyDown(KeyCode.V)) {
+            mental.mentalAftSch(5);
+        }
 
 
     }
