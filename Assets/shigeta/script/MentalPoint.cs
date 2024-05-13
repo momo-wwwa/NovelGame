@@ -7,6 +7,7 @@ public class MentalPoint : PhysicPoint
     // パラメータの初期化
     public MentalPoint () {
         power = 20;
+        Debug.Log("メンタルが" + power + "で初期化されました");
     }
 
     // 授業でのパラメータ計算
@@ -23,7 +24,8 @@ public class MentalPoint : PhysicPoint
             power = power - 3;
         }
 
-    base.limit();
+        Debug.Log("メンタルは" + power + "になりました");
+        base.limit();
 
     }
 
@@ -50,6 +52,7 @@ public class MentalPoint : PhysicPoint
             power = power - 3;
         }
 
+        Debug.Log("メンタルは" + power + "になりました");
         base.limit();
     }
 
