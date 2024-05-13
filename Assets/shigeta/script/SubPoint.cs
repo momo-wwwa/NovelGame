@@ -17,6 +17,7 @@ public class SubPoint : MonoBehaviour
         add = 0;
         crrect = 1;
         counter = 0;
+        Debug.Log("4つ変数を初期化しました");
     }
 
     // 授業のパラメータ計算
@@ -36,17 +37,20 @@ public class SubPoint : MonoBehaviour
         {
             add = add + 1;
         }
+        Debug.Log("追加する点数が" + add + "に設定されました");
 
         // 点数の追加及び上限制御
         if (point < 100) 
         {
             point = point + (add * crrect);
+            Debug.Log("点数が追加され" + point + "に変更されました");
 
             if (point > 100) 
             {
                 point = 100;
             }
         }
+        Debug.Log("点数が" + point + "に変更され、上限に達しました");
 
         // 補正値の管理
         if (counter >= 1) 
@@ -60,12 +64,16 @@ public class SubPoint : MonoBehaviour
     {
         counter += 1;
         crrect = crrect * 1.1;
+        Debug.Log("補正値が" + crrect + "に変更されました");
+        Debug.Log("補正値用のカウンターが" + counter + "に変更されました");
 
         // 初期化
         if (counter > 4 || counter <= 0) 
         {
             counter = 0;
             crrect = crrect / 1.1;
+            Debug.Log("補正値が" + crrect + "に変更されました");
+            Debug.Log("補正値用のカウンターが" + counter + "に変更されました");
         }
     }
 
@@ -73,10 +81,12 @@ public class SubPoint : MonoBehaviour
     public void aftSchCalc () 
     {
         point = point + (2 * crrect);
+        Debug.Log("点数が" + point + "に変更されました");
 
         if (point > 100) 
         {
             point = 100;
+            Debug.Log("点数が" + point + "に変更され、上限に達しました");
         }
     }
 

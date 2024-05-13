@@ -23,6 +23,7 @@ public class CalcTest : MonoBehaviour
         mental = new MentalPoint();
         physic = new PhysicPoint();
         jpLike = new LikePoint();
+        Debug.Log("3パラメータインスタンスを生成しました");
 
         // ６教科：インスタンスを生成
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.B) ||
@@ -39,16 +40,19 @@ public class CalcTest : MonoBehaviour
 
         // ６教科の授業の点数の計算・メンタル値の変移・教師好感度の変移
         if (Input.GetKeyDown(KeyCode.G)) {
+            Debug.Log("授業態度良好（G）が選ばれました");
             jp.classCalc(0);
             mental.powerClassCalc(0);
             jpLike.powerClassCalc(0);
         }
         else if (Input.GetKeyDown(KeyCode.H)) {
+            Debug.Log("授業態度並（H）が選ばれました");
             jp.classCalc(1);
             mental.powerClassCalc(1);
             jpLike.powerClassCalc(1);
         }
         else if (Input.GetKeyDown(KeyCode.I)) {
+            Debug.Log("授業態度非行(I)が選ばれました");
             jp.classCalc(2);
             mental.powerClassCalc(2);
             jpLike.powerClassCalc(2);
@@ -56,57 +60,71 @@ public class CalcTest : MonoBehaviour
 
         // ６教科の補正値のカウント開始
         if (Input.GetKeyDown(KeyCode.J)) {
+            Debug.Log("補正値のカウント（J）が開始されました");
             jp.crrectCount();
         }
 
         // 体育での体力値の変移
         if (Input.GetKeyDown(KeyCode.O)) {
+            Debug.Log("体育（O）が選択されました");
             physic.powerHealthCalc();
         }
 
         // 保健でのメンタル値の変移
         if (Input.GetKeyDown(KeyCode.P)) {
+            Debug.Log("保健（P）が選択されました");
             mental.powerHealthCalc();
         }
 
         // 放課後での教師好感度の変移
-        if (Input.GetKeyDown(KeyCode.P)) {
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            Debug.Log("放課後の好感度の変更(Q)が選択されました");
             jpLike.powerHealthCalc();
         }
 
         // ６教科の放課後の点数の計算
         if (Input.GetKeyDown(KeyCode.K)) {
+            Debug.Log("放課後の国語の勉強（K）が選択されました");
             jp.aftSchCalc();
         }
 
         // 部活での体力値の変移
         if (Input.GetKeyDown(KeyCode.L)) {
+            Debug.Log("部活態度良好（L）が選択されました");
             physic.powerClassCalc(0);
         }
         else if (Input.GetKeyDown(KeyCode.M)) {
+            Debug.Log("部活態度並（M）が選択されました");
             physic.powerClassCalc(1);
         }
         else if (Input.GetKeyDown(KeyCode.N)) {
+            Debug.Log("部活態度非行（N）が選択されました");
             physic.powerClassCalc(2);
         }
 
         // 放課後の行動によるメンタル値の変移
-        if (Input.GetKeyDown(KeyCode.Q)) {
+        if (Input.GetKeyDown(KeyCode.R)) {
+            Debug.Log("放課後に保健室(R)が選ばれました");
             mental.mentalAftSch(0);
         }
-        else if (Input.GetKeyDown(KeyCode.R)) {
+        else if (Input.GetKeyDown(KeyCode.S)) {
+            Debug.Log("放課後に、メンタルの変移２（s）が選ばれました");
             mental.mentalAftSch(1);
         }
-        else if (Input.GetKeyDown(KeyCode.S)) {
+        else if (Input.GetKeyDown(KeyCode.T)) {
+            Debug.Log("放課後にメンタルの変移３(T)が選ばれました");
             mental.mentalAftSch(2);
         }
-        else if (Input.GetKeyDown(KeyCode.T)) {
+        else if (Input.GetKeyDown(KeyCode.U)) {
+            Debug.Log("放課後にメンタルの変移4(U)が選ばれました");
             mental.mentalAftSch(3);
         }
-        else if (Input.GetKeyDown(KeyCode.U)) {
+        else if (Input.GetKeyDown(KeyCode.V)) {
+            Debug.Log("放課後にメンタルの変移５(V)が選ばれました");
             mental.mentalAftSch(4);
         }
-        else if (Input.GetKeyDown(KeyCode.V)) {
+        else if (Input.GetKeyDown(KeyCode.W)) {
+            Debug.Log("放課後にメンタルの変移６(W)が選ばれました");
             mental.mentalAftSch(5);
         }
 
