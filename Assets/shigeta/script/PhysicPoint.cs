@@ -8,7 +8,8 @@ public class PhysicPoint : MonoBehaviour
     protected int power;
 
     // パラメータの初期化
-    public PhysicPoint () {
+    void Start() 
+    {
         power = 0;
         Debug.Log("体力" + power + "に初期化されました");
     }

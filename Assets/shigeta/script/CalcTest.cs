@@ -20,11 +20,17 @@ public class CalcTest : MonoBehaviour
     void Start()
     {
         // ３パラメータ：インスタンスを生成
-        mental = new MentalPoint();
-        physic = new PhysicPoint();
-        jpLike = new LikePoint();
+        mental = gameObject.AddComponent<MentalPoint>();
+        physic = gameObject.AddComponent<PhysicPoint>();
+        jpLike = gameObject.AddComponent<LikePoint>();
+
         Debug.Log("3パラメータインスタンスを生成しました");
 
+        
+    }
+    // Update is called once per frame
+    void Update()
+    {
         // ６教科：インスタンスを生成
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.B) ||
             Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.D) ||
@@ -32,11 +38,6 @@ public class CalcTest : MonoBehaviour
         {
             Generation(Input.inputString);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
         // ６教科の授業の点数の計算・メンタル値の変移・教師好感度の変移
         if (Input.GetKeyDown(KeyCode.G)) {
@@ -135,57 +136,57 @@ public class CalcTest : MonoBehaviour
     public void Generation(string key)
     {
         if (key == "a") {
-            jp = new HrSubPoint();
-            mth = new SubPoint();
-            en = new SubPoint();
-            chem = new SubPoint();
-            phys = new SubPoint();
-            hist = new SubPoint();
+            jp = gameObject.AddComponent<HrSubPoint>();
+            mth = gameObject.AddComponent<SubPoint>();
+            en = gameObject.AddComponent<SubPoint>();
+            chem = gameObject.AddComponent<SubPoint>();
+            phys = gameObject.AddComponent<SubPoint>();
+            hist = gameObject.AddComponent<SubPoint>();
             Debug.Log("国語が担任で教科パラメータが設定されました");
         }
         else if (key == "b") {
-            mth = new HrSubPoint();
-            jp = new SubPoint();
-            en = new SubPoint();
-            chem = new SubPoint();
-            phys = new SubPoint();
-            hist = new SubPoint();
+            mth = gameObject.AddComponent<HrSubPoint>();
+            jp = gameObject.AddComponent<SubPoint>();
+            en = gameObject.AddComponent<SubPoint>();
+            chem = gameObject.AddComponent<SubPoint>();
+            phys = gameObject.AddComponent<SubPoint>();
+            hist = gameObject.AddComponent<SubPoint>();
             Debug.Log("数学が担任で教科パラメータが設定されました");
         }
         else if (key == "c") {
-            en = new HrSubPoint();
-            jp = new SubPoint();
-            mth = new SubPoint();
-            chem = new SubPoint();
-            phys = new SubPoint();
-            hist = new SubPoint();
+            en = gameObject.AddComponent<HrSubPoint>();
+            jp = gameObject.AddComponent<SubPoint>();
+            mth = gameObject.AddComponent<SubPoint>();
+            chem = gameObject.AddComponent<SubPoint>();
+            phys = gameObject.AddComponent<SubPoint>();
+            hist = gameObject.AddComponent<SubPoint>();
             Debug.Log("英語が担任で教科パラメータが設定されました");
         }
         else if (key == "d") {
-            chem = new HrSubPoint();
-            jp = new SubPoint();
-            mth = new SubPoint();
-            en = new SubPoint();
-            phys = new SubPoint();
-            hist = new SubPoint();
+            chem = gameObject.AddComponent<HrSubPoint>();
+            jp = gameObject.AddComponent<SubPoint>();
+            mth = gameObject.AddComponent<SubPoint>();
+            en = gameObject.AddComponent<SubPoint>();
+            phys = gameObject.AddComponent<SubPoint>();
+            hist = gameObject.AddComponent<SubPoint>();
             Debug.Log("化学が担任で教科パラメータが設定されました");
         }
         else if (key == "e") {
-            phys = new HrSubPoint();
-            jp = new SubPoint();
-            mth = new SubPoint();
-            en = new SubPoint();
-            chem = new SubPoint();
-            hist = new SubPoint();
+            phys = gameObject.AddComponent<HrSubPoint>();
+            jp = gameObject.AddComponent<SubPoint>();
+            mth = gameObject.AddComponent<SubPoint>();
+            en = gameObject.AddComponent<SubPoint>();
+            chem = gameObject.AddComponent<SubPoint>();
+            hist = gameObject.AddComponent<SubPoint>();
             Debug.Log("物理が担任で教科パラメータが設定されました");
         }
         else if (key == "f") {
-            hist = new HrSubPoint();
-            jp = new SubPoint();
-            mth = new SubPoint();
-            en = new SubPoint();
-            chem = new SubPoint();
-            phys = new SubPoint();
+            hist = gameObject.AddComponent<HrSubPoint>();
+            jp = gameObject.AddComponent<SubPoint>();
+            mth = gameObject.AddComponent<SubPoint>();
+            en = gameObject.AddComponent<SubPoint>();
+            chem = gameObject.AddComponent<SubPoint>();
+            phys = gameObject.AddComponent<SubPoint>();
             Debug.Log("歴史が担任で教科パラメータが設定されました");
         }
     }

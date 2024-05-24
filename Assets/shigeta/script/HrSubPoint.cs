@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class HrSubPoint : SubPoint
 {
-     protected int midSemCounter;
+    protected int midSemCounter;
 
-     public HrSubPoint() : base() 
+    void Start()
     {
         // フィールド関数の初期化
         crrect = 1.2;

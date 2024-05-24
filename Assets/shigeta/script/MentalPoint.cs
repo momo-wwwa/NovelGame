@@ -5,7 +5,8 @@ using UnityEngine;
 public class MentalPoint : PhysicPoint
 {
     // パラメータの初期化
-    public MentalPoint () {
+    void Start() 
+    {
         power = 20;
         Debug.Log("メンタルが" + power + "で初期化されました");
     }
@@ -15,13 +16,13 @@ public class MentalPoint : PhysicPoint
 
         // 授業態度による点数の判定
         if (powerAtt == 0) {
-            power = power + 3;
+            power = power - 3;
         }
         else if (powerAtt == 1) {
             power = power;
         }
         else if (powerAtt == 2) {
-            power = power - 3;
+            power = power + 3;
         }
 
         Debug.Log("メンタルは" + power + "になりました");
