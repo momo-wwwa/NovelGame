@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SubPoint : MonoBehaviour
+public class SubPoint : Sub
 {
     // 別のメソッドでも動くフィールド関数を宣言
     protected double point;
@@ -10,7 +10,7 @@ public class SubPoint : MonoBehaviour
     protected double crrect;
     protected int counter;
 
-    public SubPoint() 
+    void Start() 
     {
         // フィールド関数の初期化
         point = 0;
