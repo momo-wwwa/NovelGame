@@ -6,21 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Morimoto/Scene_morimoto.unity
-    guid: 210e159774d85ff409e291278f9525e3
-  - enabled: 1
-    path: Assets/Morimoto/ASselect_1.unity
-    guid: 497ff6593ee611140af0d61a6cc5f91b
-  - enabled: 1
-    path: Assets/Morimoto/AShome_1.unity
-    guid: 60ee086f9f0000745a83cd5de4546c0d
-  - enabled: 1
-    path: Assets/Morimoto/ASclub_1.unity
-    guid: 8e941391e74d6e143add26c5330d864c
-  - enabled: 1
-    path: Assets/Morimoto/ASlibraly_1.unity
-    guid: 232d17fd3dd3d3840ad926fbc47ccb88
-  - enabled: 1
     path: Assets/Scenes/InGamePlayScene.unity
     guid: d423b1747b683f64ca97b1bc913def20
   - enabled: 1
