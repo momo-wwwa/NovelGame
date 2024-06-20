@@ -25,21 +25,12 @@ public class SliderController : MonoBehaviour
         healthSlider.maxValue = maxHealth;
         mentalSlider.maxValue = maxMental;
 
-        // 初期の値を反映します
+        // 値を反映します
         UpdateSliders();
     }
 
     void Update()
     {
-        // 仮の更新処理
-        // ここではデモ用にランダムな値を減らしているだけ
-        currentHealth -= Random.Range(0f, 1f);
-        currentMental -= Random.Range(0f, 1f);
-
-        // 値が0未満にならないように調整します
-        currentHealth = Mathf.Max(currentHealth, 0f);
-        currentMental = Mathf.Max(currentMental, 0f);
-
         // Sliderを更新します
         UpdateSliders();
     }
@@ -51,4 +42,4 @@ public class SliderController : MonoBehaviour
         mentalSlider.value = currentMental;
 
     }
-}
+} 
