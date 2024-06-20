@@ -8,8 +8,10 @@ public class PhysicPoint : MonoBehaviour
     protected int power;
 
     // パラメータの初期化
-    public PhysicPoint () {
+    void Start() 
+    {
         power = 0;
+        Debug.Log("体力" + power + "に初期化されました");
     }
 
     // 部活でのパラメータ計算
@@ -26,22 +28,30 @@ public class PhysicPoint : MonoBehaviour
             power = power + 3;
         }
 
-    limit();
+        Debug.Log("体力が" + power + "に変更されました");
+        limit();
 
     }
 
     // 体育での変化
-    public void powerHealthCalc() {
+    public void powerHealthCalc () {
         power = power + 5;
+        Debug.Log("体力が体育で" + power + "に変更されました");
         limit();
     }
 
     public void limit() {
         if (power > 100) {
             power = 100;
+            Debug.Log("体力が" + power + "に変更され、上限に達しました");
         }
         else if (power < 0) {
             power = 0;
+            Debug.Log("体力が" + power + "に変更され、下限に達しました");
         }
+    }
+
+    public int deliverPower () {
+        return power;
     }
 }

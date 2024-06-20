@@ -5,8 +5,10 @@ using UnityEngine;
 public class LikePoint : PhysicPoint
 {
     // パラメータの初期化
-    public LikePoint () {
+    void Start() 
+    {
         power = 50;
+        Debug.Log("好感度は" + power + "に初期化されました");
     }
 
     // 授業でのパラメータ計算
@@ -23,7 +25,8 @@ public class LikePoint : PhysicPoint
             power = power - 5;
         }
 
-    base.limit();
+        Debug.Log("好感度は" + power + "に変更されました");
+        base.limit();
 
     }
 
