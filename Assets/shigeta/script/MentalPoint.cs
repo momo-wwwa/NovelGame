@@ -7,8 +7,8 @@ public class MentalPoint : PhysicPoint
     // パラメータの初期化
     void Start() 
     {
-        power = 20;
-        Debug.Log("メンタルが" + power + "で初期化されました");
+        data.power = 20;
+        Debug.Log("メンタルが" + data.power + "で初期化されました");
     }
 
     // 授業でのパラメータ計算
@@ -16,16 +16,16 @@ public class MentalPoint : PhysicPoint
 
         // 授業態度による点数の判定
         if (powerAtt == 0) {
-            power = power - 3;
+            data.power = data.power - 3;
         }
         else if (powerAtt == 1) {
-            power = power;
+            data.power = data.power;
         }
         else if (powerAtt == 2) {
-            power = power + 3;
+            data.power = data.power + 3;
         }
 
-        Debug.Log("メンタルは" + power + "になりました");
+        Debug.Log("メンタルは" + data.power + "になりました");
         base.limit();
 
     }
@@ -35,25 +35,25 @@ public class MentalPoint : PhysicPoint
     //　放課後での変化
     public void mentalAftSch(int mentalAtt) {
         if (mentalAtt == 0) {
-            power = power + 7;
+            data.power = data.power + 7;
         }
         else if (mentalAtt == 1) {
-            power = power + 5;
+            data.power = data.power + 5;
         }
         else if (mentalAtt == 2) {
-            power = power + 3;
+            data.power = data.power + 3;
         }
         else if (mentalAtt == 3) {
-            power = power + 1;
+            data.power = data.power + 1;
         }
         else if (mentalAtt == 4) {
-            power = power - 1;
+            data.power = data.power - 1;
         }
         else if (mentalAtt == 5) {
-            power = power - 3;
+            data.power = data.power - 3;
         }
 
-        Debug.Log("メンタルは" + power + "になりました");
+        Debug.Log("メンタルは" + data.power + "になりました");
         base.limit();
     }
 
