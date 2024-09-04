@@ -10,7 +10,7 @@ public class SubPoint : Sub
     protected double crrect;
     protected int counter;
 
-    void Start() 
+    public void Start() 
     {
         // フィールド関数の初期化
         point = 0;
