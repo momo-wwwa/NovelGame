@@ -8,7 +8,7 @@ public class PhysicPoint : MonoBehaviour
     public PhysicPointData data;
 
     // パラメータの初期化
-    void Start() 
+    public void Start() 
     {
         if (data != null)
         {
